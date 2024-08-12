@@ -7,6 +7,7 @@ import expressLayouts from "express-ejs-layouts"
 // routes //
 import indexRouter from "./routes/index.js"
 import authorRoute from "./routes/authors.js"
+import bookRoute from "./routes/books.js"
 
 const port= process.env.PORT || 3000
 const app=express()
@@ -19,6 +20,7 @@ app.set('layout', 'layouts/layout');
 app.use(express.urlencoded({extended:true}))
 app.use('/',indexRouter)
 app.use('/authors',authorRoute)
+app.use('/books',bookRoute)
 app.use(express.static('public'))
 
 

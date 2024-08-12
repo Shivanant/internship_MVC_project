@@ -1,0 +1,19 @@
+<h1>Search for books</h1>
+<form action="/books" method="get">
+    <input type="text" name="title" value="<%=locals.searchoptions%>">
+    <button type="submit">Search Book</button>
+</form>
+<% if (locals.errorMessage) { %>
+    <%=locals.errorMessage %>
+ 
+<% } %>
+
+<div>
+    <% books.forEach(element => { %>
+        <img height="150" width="100" src="<%= element.coverImagePath %>">
+          <div><%= element.name %></div>
+          <br>
+    <% }) %>
+    
+    
+</div>

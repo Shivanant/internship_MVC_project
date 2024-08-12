@@ -1,1 +1,11 @@
 Welcome to books project application !
+
+<div>
+    <% books.forEach(element => { %>
+        <img height="150" width="100" src="<%= element.coverImagePath %>">
+          <div><%= element.name %></div>
+          <br>
+    <% }) %>
+    
+    
+</div>
